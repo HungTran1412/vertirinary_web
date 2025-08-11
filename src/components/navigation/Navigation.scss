@@ -1,0 +1,106 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    &_logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        a{
+            text-decoration: none;
+        }
+
+        img {
+            height: 50px;
+            width: auto;
+        }
+
+        span {
+            font-family: "Chewy", cursive;
+            font-size: 20px;
+            font-weight: 600;
+            color: #6a4bbf;
+            white-space: nowrap;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        a {
+           text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #6a4bbf;
+            }
+
+            &.active {
+                color: #6a4bbf;
+                font-weight: 600;
+            }
+        }
+
+        .btn_login {
+            background-color: #f47c2c;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.2s ease, transform 0.1s ease;
+
+            &:hover {
+                background-color: #e06f22;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+
+    .navbar_logo {
+         
+      img {
+        height: 50px; /* Logo nhỏ hơn chút */
+      }
+      span {
+       
+        font-size: 1rem;
+      }
+    }
+
+    .navbar__links {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+      }
+
+      .btn_login {
+        align-self: stretch; /* Nút kéo dài full chiều ngang */
+        text-align: center;
+      }
+    }
+  }
+}
