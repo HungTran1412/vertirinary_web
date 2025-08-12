@@ -1,11 +1,14 @@
 import React from "react";
+import HeroSection from "./HeroSection/HeroSection";
 
 class Home extends React.Component{
     render(){
         return(
+            <>
             <div>
-                Trang chủ
+                <HeroSection/>
             </div>
+            </>
         )
     }
 }

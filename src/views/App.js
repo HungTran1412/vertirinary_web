@@ -19,9 +19,9 @@ import Booking from './booking/Booking';
 function App() {
   return (
     <BrowserRouter>
+      <Navigation />
       <div className="App">
         <header className="App-header">
-          <Navigation />
 
           <Routes>
             <Route path='/' element={<Home />} />
